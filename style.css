@@ -1,0 +1,71 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1 {
+    flex-basis: 10vh;
+    text-align: center;
+    line-height: 10vh;
+    background-color: black;
+    color: white;
+    font-family: sans-serif;
+}
+
+section {
+    /*flex jako element elastyczny*/
+    flex-grow: 1;
+    /*kontener flex */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: space-around;
+}
+
+section>div {
+    flex-basis: 21%;
+}
+
+section div img
+
+/*img ktore jest w divie ktore jest w sekcji*/
+    {
+    width: 100%;
+}
+
+@media (max-width:1200px) {
+    section>div {
+        flex-basis: 50%;
+        padding: 50px;
+    }
+}
+
+@media (max-width:1024px) {
+    section>div {
+        flex-basis: 50%;
+        padding: 30px;
+    }
+}
+
+@media (max-width:640px) {
+    section>div {
+        padding: 15px;
+    }
+}
+
+@media (max-width:500px)
+
+/*TU MA BYC 460PX ALE JUZ BYM NIE WIDZIALA JAK SIE ZMIANIA NAMOIM MALYM EKRANIE*/
+    {
+    section>div {
+        flex-basis: 100%;
+        /* padding: 15px; /* JESLI JEST POWTORZONE TO NAWET NIE MUSZE TEGO ZNOW PISAC BO BIERZE SOBIE TA OPCJE Z LINIJKI WYZEJ*/
+    }
+}
